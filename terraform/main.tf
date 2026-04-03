@@ -7,7 +7,7 @@ resource "aws_instance" "game_server" {
   instance_type = "t3.small"
   key_name      = "devopskey"
 
-  security_groups = [aws_security_group.gamesathe.name]
+  vpc_security_group_ids = [aws_security_group.gamesathe.id]
 
   user_data = <<-EOF
               #!/bin/bash
