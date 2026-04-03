@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        KEY_PATH = "/var/lib/jenkins/ubuntu.pem"
+        KEY_PATH = "/var/lib/jenkins/devopskey.pem"
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/satheeshm5465-aws/ci-cd-game'
+                git branch: 'main', url: 'https://github.com/jewleprince-course/ci-cd-game'
             }
         }
 
